@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 // import './App.css';
 import React, {useState} from 'react';
-import moment from 'moment';
+import {getToday} from './moment-utils';
 import './bae-calendar.scss';
-import CalendaerHeader from './calendar-header';
+import CalendarHeader from './calendar-header';
+import WeekdayIndicator from './weekday-indicator';
 
 const getDaysInMonth = (month, year) => {
   return moment(`${month}-${year}`, 'MM-YYYY').daysInMonth();
