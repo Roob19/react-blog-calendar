@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
+import moment from 'moment';
 import {getToday} from './moment-utils';
 import './bae-calendar.scss';
-
 import CalendarHeader from './calendar-header';
 import WeekdayIndicator from './weekday-indicator';
 import DateIndicator from './date-indicator';
+import MonthIndicator from './month-indicator';
 
 const BaeCalendar = () => {
   const [selectDate, setSelectDate] = useState(moment().toDate());
@@ -15,6 +16,10 @@ const BaeCalendar = () => {
       <DateIndicator 
         selectDate={selectDate} 
         setSelectDate={setSelectDate}
+      />
+      <MonthIndicator 
+        selectDate={selectDate} 
+        setSelectDate={setSelectDate} 
       />
     </div>
   );
